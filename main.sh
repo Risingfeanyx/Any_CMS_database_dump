@@ -1,23 +1,18 @@
-	{
+	#/bin/bash
 	clear
-	#WORDPRESS
-	echo "Password is $(awk -F"'" '/DB_PASSWORD/{print $4}' wp-config.php)"
+	#Wordpress
+	if test -f "wp-config.php"; then echo "This is Wordpress $(wp core version)" ;fi 
+	echo "Password for $(awk -F"'" '/DB_NAME/{print $4}' wp-config.php) is $(awk -F"'" '/DB_PASSWORD/{print $4}' wp-config.php)"
 	echo "mysqldump -p -u $(awk -F"'" '/DB_USER/{print $4}' wp-config.php) $(awk -F"'" '/DB_NAME/{print $4}' wp-config.php) > $(awk -F"'" '/DB_NAME/{print $4}' wp-config.php).$(whoami).$(date +%F).sql"
 	mysqldump -p -u $(awk -F"'" '/DB_USER/{print $4}' wp-config.php) $(awk -F"'" '/DB_NAME/{print $4}' wp-config.php) > $(awk -F"'" '/DB_NAME/{print $4}' wp-config.php).$(whoami).$(date +%F).sql
-	echo *.sql
 	ls -1t | head -1 | grep *.sql
-	}
+	
 
 
-	#Prestashop 1.6 - 
-	cat config.php/settings.inc.php | grep 'dbname\|username\|password'
-	#Prestashop 1.7
-	cat app/config.php/parameters.php | grep 'dbname\|username\|password'
-	#Drupal 
-	cat sites/default/settings.php |grep 'dbname\|username\|password'
-	#Moodle 
-	cat config.php.php | grep 'dbname\|username\|password' 
-	#Magento 
-	cat app/etc/env.php | grep 'dbname\|username\|password'
-	#PHP
-	cat include/connect.php | grep DATABASE
+	#Prestashop
+	clear
+	if test -f "config/settings.inc.php"; then echo "This is Prestashop $(awk -F"'" '/PS_VERSION/{print $4}' config/settings.inc.php) installed on $(awk -F"'" '/PS_CREATION_DATE/{print $4}' config/settings.inc.php)" ;fi 
+	echo "Password for $(awk -F"'" '/DB_NAME/{print $4}' config/settings.inc.php) is $(awk -F"'" '/DB_PASSWD_/{print $4}' config/settings.inc.php)"
+	echo "mysqldump -p -u $(awk -F"'" '/DB_USER/{print $4}' config/settings.inc.php) $(awk -F"'" '/DB_NAME/{print $4}' config/settings.inc.php) > $(awk -F"'" '/DB_NAME/{print $4}' config/settings.inc.php).$(whoami).$(date +%F).sql"
+	mysqldump -p -u $(awk -F"'" '/DB_USER/{print $4}' config/settings.inc.php) $(awk -F"'" '/DB_NAME/{print $4}' config/settings.inc.php) > $(awk -F"'" '/DB_NAME/{print $4}' config/settings.inc.php).$(whoami).$(date +%F).sql
+	ls -1t | head -1 | grep *.sql
