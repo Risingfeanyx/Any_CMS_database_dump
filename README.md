@@ -6,5 +6,5 @@ The purpose of this is to echo out the database credentials for any CMS and the 
 	#actually clean code coming soon™
 
 ```
-/bin/bash -c "$(curl -fsSL  https://raw.githubusercontent.com/Risingfeanyx/Any_CMS_database_dump/master/main.sh)"
+https://raw.githubusercontent.com/Risingfeanyx/Any_CMS_database_dump/master/main.sh
 ```
