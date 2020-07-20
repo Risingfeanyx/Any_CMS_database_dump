@@ -49,4 +49,4 @@
 	clear
 	if test -f "index.html"; then echo "This is HTML. I got nothin  ¯\_(ツ)_/¯ " ;fi
 	}
-	echo "Wordpress , Prestashop , Joomla, Moodle, Magento, PHP, HTML"
+	clear ; echo "Wordpress , Prestashop , Joomla, Moodle, Magento, PHP, HTML"
