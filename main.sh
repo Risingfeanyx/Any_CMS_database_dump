@@ -21,27 +21,32 @@
 
 	Joomla()
 	{
+	clear
 	if test -f "configuration.php"; then echo "This is Joomla. I got nothin ¯\_(ツ)_/¯ " ;fi
 	}
 	
 	Moodle()
 	{
+	clear
 	if test -f "moodle/config.php"; then echo "This is Moodle. I got nothin yet ¯\_(ツ)_/¯ " ;fi
 	}
 	
 	Magento()
 	{
+	clear
 	if test -f "app/etc/env.php"; then echo "This is Magento. I got nothin yet ¯\_(ツ)_/¯ " ;fi
 	}
 	#
 	
 	PHP()
 	{
+	clear
 	if test -f "include/connect.php"; then echo "This is PHP. I got nothin yet ¯\_(ツ)_/¯ " ;fi
 	}
 	
 	HTML()
 	{
+	clear
 	if test -f "index.html"; then echo "This is HTML. I got nothin  ¯\_(ツ)_/¯ " ;fi
 	}
 	echo "Wordpress , Prestashop , Joomla, Moodle, Magento, PHP, HTML"
