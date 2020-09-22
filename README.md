@@ -5,4 +5,8 @@ The purpose of this is to echo out the database credentials for any CMS and the 
 	#Drupal coming soon™ 
 	#actually clean code involving conditional statements coming soon™
 
+```
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Risingfeanyx/Any_CMS_database_dump/master/conditional.sh)"
+```
+
  <a href="https://raw.githubusercontent.com/Risingfeanyx/Any_CMS_database_dump/master/main.sh" target="_blank">raw file</a>
