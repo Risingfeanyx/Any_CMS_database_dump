@@ -15,10 +15,10 @@ then
 	echo "mysqldump -p -u $(awk -F"'" '/DB_USER/{print $4}' config/settings.inc.php) $(awk -F"'" '/DB_NAME/{print $4}' config/settings.inc.php) > $(awk -F"'" '/DB_NAME/{print $4}' config/settings.inc.php).$(whoami).$(date +%F).sql"
 	} 
 	fi
- if test -f "configuration.php"; then echo "This is Joomla. I got nothin ¯\_(ツ)_/¯ " ;fi
+ if test -f "configuration.php"; then echo "This is Joomla. I got nothin as of $(date +%F) ¯\_(ツ)_/¯ " ;fi
 
-	if test -f "moodle/config.php"; then echo "This is Moodle. I got nothin yet ¯\_(ツ)_/¯ " ;fi
-	if test -f "app/etc/env.php"; then echo "This is Magento. I got nothin yet ¯\_(ツ)_/¯ " ;fi
-	if test -f "include/connect.php"; then echo "This is PHP. I got nothin yet ¯\_(ツ)_/¯ " ;fi
-	if test -f "index.html"; then echo "This is HTML. I got nothin  ¯\_(ツ)_/¯ " ;f
+	if test -f "moodle/config.php"; then echo "This is Moodle. I got nothin as of $(date +%F) yet ¯\_(ツ)_/¯ " ;fi
+	if test -f "app/etc/env.php"; then echo "This is Magento. I got nothin as of $(date +%F) yet ¯\_(ツ)_/¯ " ;fi
+	if test -f "include/connect.php"; then echo "This is PHP. I got nothin as of $(date +%F) yet ¯\_(ツ)_/¯ " ;fi
+	if test -f "index.html"; then echo "This is HTML. I got nothin as of $(date +%F)  ¯\_(ツ)_/¯ " ;f
    fi
